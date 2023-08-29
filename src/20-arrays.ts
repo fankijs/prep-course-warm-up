@@ -8,4 +8,19 @@ export {};
  *  - https://javascript.info/array
  */
 
-console.log(stringToArray(["John Doe"])); // Expected output: ['John', 'Doe']
+function stringToArray(listOfNames: string[]) {
+    let result: string[] = [];
+    for (let i = 0; i < listOfNames.length; i++) {
+        console.log("outer for loop: ", listOfNames[i].split(" "));
+        const nameSurnameArray = listOfNames[i].split(" ");
+        for (let j = 0; j < nameSurnameArray.length; j++) {
+            console.log("inner for loop: ", nameSurnameArray[j]);
+            result.push(nameSurnameArray[j]);
+        
+        }
+    }
+    return result
+    }
+        
+
+console.log(stringToArray(["John Doe", "Antons Pontons"])); // Expected output: ['John', 'Doe', 'Antons', 'Pontons']

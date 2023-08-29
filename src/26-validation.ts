@@ -8,10 +8,20 @@ export {};
  *  - is not equal to any of the numbers in the array `excludedNums`
  */
 
-const excludedNums = [6, 14, 91, 111];
+const excludedNums: number[] = [6, 14, 91, 111];
 
 // You are allowed to edit only this function
-function validate(num) {}
+function validate(num: number): boolean {
+  if (typeof num !== 'number' || !Number.isInteger(num)) {
+    return false;
+  }
+
+  if (excludedNums.includes(num)) {
+    return false;
+  }
+
+  return true;
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

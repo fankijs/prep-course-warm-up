@@ -1,14 +1,24 @@
 export {};
 
-function add() {}
-
-function subtract() {}
-
-function sum() {}
-
-function multiply() {}
-
-function power() {}
+function add(a: number, b: number): number {
+    return a + b;
+}
+  
+function subtract(a: number, b: number): number {
+    return a - b;
+}
+  
+function sum(numbers: number[]): number {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+  
+function multiply(numbers: number[]): number {
+    return numbers.reduce((acc, num) => acc * num, 1);
+}
+  
+function power(base: number, exponent: number): number {
+    return Math.pow(base, exponent);
+}
 
 console.log(add(1, 2)); // Expected output: 3
 console.log(subtract(1, 2)); // Expected output: -1

@@ -20,6 +20,8 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+const getTheTitles = (bookArray: { title: string, author: string }[]): string[] => {
+  return bookArray.map(book => book.title);
+};
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']

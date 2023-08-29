@@ -9,7 +9,17 @@ export {};
  *  - https://www.youtube.com/watch?v=Kn06785pkJg (JavaScript Loops Made Easy)
 */
 
-function goThroughNumbers(start, end) {}
+function goThroughNumbers(start: number, end: number): void | string {
+  if (typeof start !== 'number' || typeof end !== 'number' || start > end) {
+    return 'invalid input';
+  }
+
+  for (let num = start; num <= end; num++) {
+    const isEven: boolean = num % 2 === 0;
+    const parity: string = isEven ? 'even' : 'odd';
+    console.log(`> ${num} - ${parity}`);
+  }
+}
 
 goThroughNumbers(3, 7);
 /* Expected output:

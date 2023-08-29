@@ -5,7 +5,11 @@ export {};
  *  - https://blog.codeanalogies.com/2017/11/07/javascript-for-loops-explained/
  */
 
-function draw() {}
+function draw(height: number): void {
+  for (let i = 1; i <= height; i++) {
+    console.log('*'.repeat(i));
+  }
+}
 
 draw(3);
 /* Expected output:
